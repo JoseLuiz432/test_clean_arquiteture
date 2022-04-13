@@ -25,5 +25,6 @@ test('should resolve with the newly persisted lead (augmented with an ID)', asyn
     'Rua teste de maio', 'john.doe@email.com', 
     {'latitude': 120, 'longitude': 120}, 2
     ));
+    
   expect(lead).toEqual(persistedLead);
 });
