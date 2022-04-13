@@ -1,0 +1,69 @@
+{
+    "$jsonSchema" : {
+        "bsonType": "object",
+        "title": "Record of leads for Recicla inheritance  from leads ",
+        "description": "This document records the details of an Recicla's lead",
+        "type": "object",
+        "properties": {
+            "id": {
+                "description": "A unique identifier for an lead",
+                "type": "string"
+            },
+            "cnpj_cpf": {
+                "description": "cnpj or cpf of the lead",
+                "type": "number"
+            },
+            "nome_contato": {
+                "description": "lead's name, it can be either person or company name (include fantasia)",
+                "type": "string",
+                "minLength": 2
+            },
+            "telefone": {
+                "description": "telefone number of the lead",
+                "type": "number"
+            },
+            "endereco": {
+                "description": "address of the lead following this example: Rua Aristoteles, 52, bloco c, Prado, Belo Horizonte, MG",
+                "type": "string",
+                "minLength": 2
+            },
+            "email": {
+                "description": "email of the lead it must be verified",
+                "type": "string",
+                "minLength": 2
+            },
+            "localizacao": {
+                "type": "object",
+                "properties": {
+                    "latitude": {
+                    "type": "number",
+                    "minimum": -90,
+                    "maximum": 90
+                    },
+                    "longitude": {
+                    "type": "number",
+                    "minimum": -180,
+                    "maximum": 180
+                    }
+                },
+                "required":[
+                    "latitude", 
+                    "longitude" 
+                ]
+            },
+            "status_telefone":{
+                "description": "telefone status checked using twillio (0 - no_answer, 1 - invalid, 2 - recheable)",
+                "type": "number"
+            }
+        },
+        "required": [
+            "id", 
+            "cnpj_cpf",
+            "nome_contato",
+            "telefone",
+            "endereco",
+            "email",
+            "localizacao"
+        ]
+    }
+}

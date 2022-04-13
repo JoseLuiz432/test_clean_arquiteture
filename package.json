@@ -1,0 +1,28 @@
+{
+  "name": "dao_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@hapi/good": "^9.0.1",
+    "@hapi/good-console": "^9.0.1",
+    "@hapi/good-squeeze": "^6.0.0",
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "assert": "^2.0.0",
+    "blipp": "^4.0.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "hapi-swagger": "^14.2.5",
+    "http": "0.0.1-security",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.2.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
