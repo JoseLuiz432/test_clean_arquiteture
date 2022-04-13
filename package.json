@@ -1,5 +1,5 @@
 {
-  "name": "dao_test",
+  "name": "test-clean-arquiteture",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,11 +17,17 @@
     "hapi-swagger": "^14.2.5",
     "http": "0.0.1-security",
     "mongodb": "^4.5.0",
-    "mongoose": "^6.2.10"
+    "mongoose": "^6.2.10",
+    "win-node-env": "^0.6.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "start": "node index.js",
+    "test": "NODE_ENV=test jest",
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC"
